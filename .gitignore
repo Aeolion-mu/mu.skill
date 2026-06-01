@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# Love Map databases hold sensitive personal data — never commit them.
+# (`init` also writes a self-contained .gitignore inside each DB.)
+love-map-db/
+*-love-map-db/
