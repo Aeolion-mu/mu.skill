@@ -1,6 +1,6 @@
 # Tag Taxonomy
 
-Tags 用于让 agent 和 `rg` 稳定检索。
+Tags 用于让 agent 和 `rg` 稳定检索。模板自动产出的 tag 家族：`person/`、`layer/`、`status/`，summary 模板还产出 `summary/`，contradiction 模板产出 `type/contradiction`；下面其余的（disclosure/topic/need/signal/source/privacy）按需手动补。
 
 ## layer tags
 
@@ -10,6 +10,7 @@ tags:
   - layer/preferences-habits
   - layer/stress-emotions
   - layer/dreams-values
+  - layer/relationship
 ```
 
 ## status tags
@@ -20,6 +21,14 @@ tags:
   - status/uncertain
   - status/outdated
   - status/contradicted
+```
+
+## disclosure tags（谁先开口——pull-only 的关键）
+
+```yaml
+tags:
+  - disclosure/volunteered   # 对方主动说
+  - disclosure/elicited      # 你问出来的（禁区话题不该是这个）
 ```
 
 ## source tags
@@ -47,6 +56,7 @@ tags:
   - topic/music
   - topic/movie
   - topic/conflict
+  - topic/repair          # 吵架后怎么和好
 ```
 
 ## need tags
@@ -69,6 +79,7 @@ tags:
   - signal/felt-neglected
   - signal/became-quiet
   - signal/liked-quiet-place
+  - signal/reciprocated      # 对方主动回敬 → 协议解锁信号
 ```
 
 ## privacy tags
@@ -88,4 +99,3 @@ tags:
 tags:
   - person/{person_id}
 ```
-
